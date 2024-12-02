@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homebase Integrated Programs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Top menu styling */
+        .top-menu {
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .top-menu .menu-item {
+            position: relative;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .top-menu .menu-item:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        /* Sidebar styling */
+        .content {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+	    min-height: 90vh
+        }
+        .sidebar {
+            width: 200px;
+            margin-right: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .sidebar li:hover {
+            background-color: #ddd;
+        }
+        /* Image container styling */
+        .container {
+            display: flex;
+            grid-template-rows: fit-content(10%);
+            gap: 0px;
+            flex-grow: 1;
+	    flex-wrap: wrap;
+	    flex-direction: column;
+        }
+        .image-wrapper {
+            display: flex;
+            flex-direction: row;
+	    align-items: left;
+        }
+        img {
+            max-width: 10%;
+            height: auto;
+            border-radius: 8px;
+        }
+        select {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 1em;
+        }
+        /*AI Assistant styling */
+	.bottom-menu {
+	    position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .text-box {
+            width: 80%;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Top Menu with Dropdown Items -->
+        <div class="top-menu">
+            <div class="menu-item">Account
+                <div class="dropdown-content">
+                    <a href="#">Option 1.1</a>
+                    <a href="#">Option 1.2</a>
+                    <a href="#">Option 1.3</a>
+                </div>
+            </div>
+            <div class="menu-item">Subscriptions
+                <div class="dropdown-content">
+                    <a href="#">Option 2.1</a>
+                    <a href="#">Option 2.2</a>
+                    <a href="#">Option 2.3</a>
+                </div>
+            </div>
+            <div class="menu-item">Settings
+                <div class="dropdown-content">
+                    <a href="#">Option 3.1</a>
+                    <a href="#">Option 3.2</a>
+                    <a href="#">Option 3.3</a>
+                </div>
+            </div>
+            <div class="menu-item">About
+                <div class="dropdown-content">
+                    <a href="#">Option 4.1</a>
+                    <a href="#">Option 4.2</a>
+                    <a href="#">Option 4.3</a>
+                </div>
+            </div>
+            <div class="menu-item">Help
+                <div class="dropdown-content">
+                    <a href="#">Option 5.1</a>
+                    <a href="#">Option 5.2</a>
+                    <a href="#">Option 5.3</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <!-- Sidebar with a list of 10 items -->
+            <div class="sidebar">
+		<p>
+		    Recent Files
+		</p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <li>Item 6</li>
+                    <li>Item 7</li>
+                    <li>Item 8</li>
+                    <li>Item 9</li>
+                    <li>Item 10</li>
+                </ul>
+            </div>
+            <!-- Image gallery with dropdowns -->
+            <div class="container">
+                <div class="image-wrapper">
+                    <img src="software_editor_image.jpg" alt="Software Editor">
+                    <p><select>
+                        <option value="" disabled selected>Software Editor</option>
+                        <option value="option1">New File...</option>
+                        <option value="option2">Open File...</option>
+                        <option value="option3">Recent File...</option>
+                    </select></p>
+                </div>
+                <!-- Repeat image-wrapper block for each image -->
+                <div class="image-wrapper">
+                    <img src="document_editor_image.jpg" alt="Document Editor">
+                    <p><select>
+                        <option value="" disabled selected>Document Editor</option>
+                        <option value="option1">New File...</option>
+                        <option value="option2">Open File...</option>
+                        <option value="option3">Recent File...</option>
+                    </select></p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="spreadsheet_editor_image.jpg" alt="Spreadsheet Editor">
+                    <p><select>
+                        <option value="" disabled selected>Spreadsheet Editor</option>
+                        <option value="option1">New File...</option>
+                        <option value="option2">Open File...</option>
+                        <option value="option3">Recent File...</option>
+                    </select></p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="presentation_editor_image.jpg" alt="Presentation Editor">
+                    <p><select>
+                        <option value="" disabled selected>Presentation Editor</option>
+                        <option value="option1">New File...</option>
+                        <option value="option2">Open File...</option>
+                        <option value="option3">Recent File...</option>
+                    </select></p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="photo_editor_image.jpg" alt="Photo Editor">
+                    <p><select>
+                        <option value="" disabled selected>Photo Editor</option>
+                        <option value="option1">New File...</option>
+                        <option value="option2">Open File...</option>
+                        <option value="option3">Recent File...</option>
+                    </select></p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="video_editor_image.jpg" alt="Video Editor">
+                    <p><select>
+                        <option value="" disabled selected>Video Editor</option>
+                        <option value="option1">New File...</option>
+                        <option value="option2">Open File...</option>
+                        <option value="option3">Recent File...</option>
+                    </select></p>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+	<div class="ai-assistant">
+            <input type="text" class="text-box" placeholder="Ask the AI...">
+        </div>
+    </div>
+
+</body>
+</html>
